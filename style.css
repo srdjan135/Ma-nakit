@@ -1,0 +1,270 @@
+/*color:#22211f;*/
+/*color:#2e413d;*/
+/*color:#51b39c;*/
+/*color:#e5fff1;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Chamberlain;
+  src: url(ChamberlainDemoRegular.ttf);
+}
+
+body {
+  background-color: #e5fff1 !important;
+  font-family: Chamberlain !important;
+}
+
+/* NAVBAR */
+
+nav.navbar {
+  padding: 10px 0 !important;
+  background: #e5fff1 !important;
+}
+nav ul {
+  text-transform: uppercase;
+}
+nav li a.active {
+  border-bottom: 3px solid #51b39c;
+}
+nav li a {
+  font-weight: bold !important;
+  letter-spacing: 2px !important;
+}
+nav img.logo {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  width: 48px;
+  height: 29px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: none !important;
+}
+.button span {
+  height: 3px;
+  width: 100%;
+  background: #7777;
+  display: block;
+  margin-top: 5px;
+  transition: all 0.5s cubic-bezier(0.62, 0.43, 0.35, 1.47);
+}
+.button span:first-child {
+  margin-top: 0;
+}
+
+/* toggle icon animation */
+#check:checked ~ .button span:nth-child(1) {
+  width: 100%;
+  transform: rotate(45deg) translateY(4px) translateX(6px);
+}
+#check:checked ~ .button span:nth-child(2) {
+  width: 0;
+}
+
+#check:checked ~ .button span:nth-child(3) {
+  width: 100%;
+  transform: rotate(-45deg) translateY(-6px) translateX(7px);
+}
+
+/* IMAGE SECTION */
+
+.image-section {
+  width: 100%;
+  height: 300px;
+  margin-top: 100px;
+}
+
+.images {
+  width: 350px;
+  height: 250px;
+  border: 8px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img1 {
+  position: relative;
+  top: 200px;
+  left: 150px;
+  z-index: 3;
+}
+
+.img2 {
+  z-index: 2;
+}
+
+.img3 {
+  position: relative;
+  top: 200px;
+  right: 150px;
+  z-index: 0;
+}
+
+/* BLOCKQUOTE SECITON */
+
+#blockquote {
+  padding: 100px 0;
+  margin-top: 200px;
+}
+
+#blockquote p {
+  font-size: 30px;
+  text-align: center;
+  font-family: Chamberlain !important;
+}
+
+/* MARQUEE */
+
+#marquee {
+  width: 87%;
+  height: 300px;
+  margin: 100px auto 0px auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#image-list {
+  display: inline-block;
+  animation: marquee 20s ease infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#marquee ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+#marquee ul li {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#marquee ul li img {
+  width: 300px;
+  height: 300px;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #51b39c;
+  padding: 40px 0;
+  margin-top: 200px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+footer ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+footer ul li a i {
+  font-size: 30px;
+  color: #51b39c;
+  transition: 0.3s ease;
+}
+footer ul li:hover i {
+  color: #fff;
+}
+footer ul li:hover a {
+  background-color: #51b39c;
+}
+
+/* RESPONSIVITY */
+
+@media (max-width: 992px) {
+  .image-section .container {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .onama {
+    width: max-content;
+  }
+  img.logo {
+    width: 200px;
+    height: 131px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  img.logo {
+    width: 70%;
+    height: 50%;
+  }
+  .img1,
+  .img2,
+  .img3 {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    position: static;
+  }
+  .image-section {
+    height: auto;
+  }
+  .image-section .container {
+    max-width: 550px !important;
+  }
+  .image-section .col-md-4 {
+    width: 100% !important;
+  }
+  nav .Logo-link {
+    width: 75%;
+  }
+  nav .Logo-link img {
+    width: 85%;
+  }
+}
+
+@media (max-width: 490px) {
+  img.logo {
+    width: 100%;
+    height: 50%;
+  }
+  .Logo-link {
+    width: 50%;
+  }
+}

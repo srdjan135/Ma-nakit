@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Chamberlain;
+  src: url(../ChamberlainDemoRegular.ttf);
+}
+
+body {
+  background-color: #e5fff1 !important;
+  font-family: Chamberlain !important;
+}
+
+nav.navbar {
+  padding: 10px 0 !important;
+  background: #e5fff1 !important;
+  font-family: Chamberlain;
+}
+nav ul {
+  text-transform: uppercase;
+}
+nav li a.active {
+  border-bottom: 3px solid #51b39c;
+}
+nav li a {
+  font-weight: bold !important;
+  letter-spacing: 2px !important;
+}
+nav img.logo {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  width: 48px;
+  height: 29px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: none !important;
+}
+.button span {
+  height: 3px;
+  width: 100%;
+  background: #7777;
+  display: block;
+  margin-top: 5px;
+  transition: all 0.5s cubic-bezier(0.62, 0.43, 0.35, 1.47);
+}
+.button span:first-child {
+  margin-top: 0;
+}
+
+/* toggle icon animation */
+#check:checked ~ .button span:nth-child(1) {
+  width: 100%;
+  transform: rotate(45deg) translateY(4px) translateX(6px);
+}
+#check:checked ~ .button span:nth-child(2) {
+  width: 0;
+}
+
+#check:checked ~ .button span:nth-child(3) {
+  width: 100%;
+  transform: rotate(-45deg) translateY(-6px) translateX(7px);
+}
+
+.first {
+  margin-top: 50px;
+}
+
+.second,
+.third {
+  margin-top: 150px;
+}
+
+.image-section,
+.image-section-2,
+.image-section-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.image-section .image {
+  width: 200px;
+  height: 220px;
+  background-color: #fff;
+}
+
+.image-section .left-image {
+  transform: rotate(340deg);
+  box-shadow: -3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.image-section .right-image {
+  transform: rotate(30deg);
+  position: relative;
+  left: 50px;
+  top: 100px;
+  box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.image-section .image img {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+.image-section-2 img,
+.image-section-3 img {
+  width: 250px;
+  height: 250px;
+  border: 5px solid #51b39c;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column;
+  }
+  .wrap-reverse {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column-reverse;
+  }
+  .text {
+    width: 100% !important;
+  }
+  .image-section,
+  .image-section-2,
+  .image-section-3 {
+    width: 100% !important;
+    margin-top: 100px !important;
+  }
+  .image-section .left-image,
+  .image-section .right-image {
+    transform: rotate(0deg);
+    position: static;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-section {
+    flex-direction: column !important;
+  }
+  .image-section .image {
+    width: 75% !important;
+    height: 320px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .image-section .image img {
+    width: 100% !important;
+    height: 300px;
+  }
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #51b39c;
+  padding: 40px 0;
+  margin-top: 200px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+footer ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+footer ul li a i {
+  font-size: 30px;
+  color: #51b39c;
+  transition: 0.3s ease;
+}
+footer ul li:hover i {
+  color: #fff;
+}
+footer ul li:hover a {
+  background-color: #51b39c;
+}

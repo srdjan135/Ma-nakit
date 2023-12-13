@@ -1,0 +1,493 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Chamberlain;
+  src: url(../ChamberlainDemoRegular.ttf);
+}
+
+body {
+  background-color: #e5fff1 !important;
+  font-family: Chamberlain !important;
+}
+
+/* NAVBAR */
+
+nav.navbar {
+  padding: 10px 0 !important;
+  background: #e5fff1 !important;
+}
+nav ul {
+  text-transform: uppercase;
+}
+nav li a.active {
+  border-bottom: 3px solid #51b39c;
+}
+nav li a {
+  font-weight: bold !important;
+  letter-spacing: 2px !important;
+}
+nav img.logo {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+}
+
+#check {
+  display: none;
+}
+
+.button {
+  width: 48px;
+  height: 29px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: none !important;
+}
+.button span {
+  height: 3px;
+  width: 100%;
+  background: #7777;
+  display: block;
+  margin-top: 5px;
+  transition: all 0.5s cubic-bezier(0.62, 0.43, 0.35, 1.47);
+}
+.button span:first-child {
+  margin-top: 0;
+}
+
+/* toggle icon animation */
+#check:checked ~ .button span:nth-child(1) {
+  width: 100%;
+  transform: rotate(45deg) translateY(4px) translateX(6px);
+}
+#check:checked ~ .button span:nth-child(2) {
+  width: 0;
+}
+
+#check:checked ~ .button span:nth-child(3) {
+  width: 100%;
+  transform: rotate(-45deg) translateY(-6px) translateX(7px);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #51b39c;
+  padding: 40px 0;
+  margin-top: 200px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+footer ul li a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+footer ul li a i {
+  font-size: 30px;
+  color: #51b39c;
+  transition: 0.3s ease;
+}
+footer ul li:hover i {
+  color: #fff;
+}
+footer ul li:hover a {
+  background-color: #51b39c;
+}
+.kolekcije {
+  height: 700px;
+}
+.ljetnja {
+  height: 250px;
+  width: 70%;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  font-family: Chamberlain !important;
+  position: relative;
+  top: 50px;
+}
+.jesenja {
+  height: 250px;
+  width: 70%;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+}
+.cvjetici {
+  height: 250px;
+  width: 70%;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+}
+.providnost1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  z-index: 0;
+  transition: 0.6s ease;
+}
+.providnost2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.ljetnja h2 {
+  z-index: 1;
+  position: relative;
+  top: -180px;
+}
+.jesenja h2 {
+  z-index: 1;
+  position: relative;
+  top: -180px;
+}
+.zimska h2 {
+  z-index: 1;
+  position: relative;
+  top: -180px;
+}
+.providnost1:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.providnost2:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.providnost3:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.pokloni {
+  height: 250px;
+  width: 70%;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  font-family: Chamberlain !important;
+  position: relative;
+  top: 150px;
+}
+.biseri h2 {
+  position: relative;
+  top: -150px;
+}
+.providnost4 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost4:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.privjesci {
+  height: 250px;
+  width: 70%;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  font-family: Chamberlain !important;
+  position: relative;
+  top: 150px;
+}
+.privjesci h2 {
+  position: relative;
+  top: -150px;
+}
+.providnost5 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost5:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.svecana {
+  height: 250px;
+  width: 70%;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  font-family: Chamberlain !important;
+  position: relative;
+  top: 150px;
+}
+.svecana h2 {
+  position: relative;
+  top: -170px;
+}
+.providnost6 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost6:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.folklor {
+  height: 250px;
+  width: 70%;
+  outline: 7px solid rgb(224, 223, 223);
+  border-radius: 10px;
+  background-image: url(slika3.jpg);
+  background-size: cover;
+  font-family: Chamberlain !important;
+  position: relative;
+  top: 250px;
+}
+.folklor h2 {
+  position: relative;
+  top: -150px;
+}
+.providnost7 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost7:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+
+.pokloni h2 {
+  position: relative;
+  top: -150px;
+}
+.providnost8 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost8:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+.cvjetici h2 {
+  position: relative;
+  top: -150px;
+}
+.providnost9 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f1eb;
+  opacity: 0.48;
+  border-radius: 10px;
+  transition: 0.6s ease;
+}
+.providnost9:hover {
+  background-color: #52b39c;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .kolekcije {
+    height: 2200px;
+  }
+  .ljetnja {
+    height: 200px;
+    width: 50%;
+    top: 100px;
+  }
+  .jesenja {
+    height: 200px;
+    width: 50%;
+    top: 150px;
+  }
+  .zimska {
+    height: 200px;
+    width: 50%;
+    top: 200px;
+  }
+  .biseri {
+    height: 200px;
+    width: 50%;
+    top: 250px;
+  }
+  .privjesci {
+    height: 200px;
+    width: 50%;
+    top: 300px;
+  }
+  .svecana {
+    height: 200px;
+    width: 50%;
+    top: 350px;
+  }
+  .folklor {
+    height: 200px;
+    width: 50%;
+    top: 400px;
+  }
+  .pokloni {
+    height: 200px;
+    width: 50%;
+    top: 450px;
+  }
+  .cvjetici {
+    height: 200px;
+    width: 50%;
+    top: 500px;
+  }
+  .ljetnja h2 {
+    top: -140px;
+  }
+  .jesenja h2 {
+    top: -140px;
+  }
+  .zimska h2 {
+    top: -140px;
+  }
+  .biseri h2 {
+    top: -140px;
+  }
+  .privjesci h2 {
+    top: -140px;
+  }
+  .svecana h2 {
+    top: -140px;
+  }
+  .folklor h2 {
+    top: -140px;
+  }
+  .pokloni h2 {
+    top: -140px;
+  }
+  .cvjetici h2 {
+    top: -140px;
+  }
+}
+@media only screen and (max-width: 529px) {
+  .kolekcije {
+    height: 2200px;
+  }
+  .ljetnja {
+    height: 200px;
+    width: 60%;
+    top: 100px;
+  }
+  .jesenja {
+    height: 200px;
+    width: 60%;
+    top: 150px;
+  }
+  .zimska {
+    height: 200px;
+    width: 60%;
+    top: 200px;
+  }
+  .biseri {
+    height: 200px;
+    width: 60%;
+    top: 250px;
+  }
+  .privjesci {
+    height: 200px;
+    width: 60%;
+    top: 300px;
+  }
+  .svecana {
+    height: 200px;
+    width: 60%;
+    top: 350px;
+  }
+  .folklor {
+    height: 200px;
+    width: 60%;
+    top: 400px;
+  }
+  .pokloni {
+    height: 200px;
+    width: 60%;
+    top: 450px;
+  }
+  .cvjetici {
+    height: 200px;
+    width: 60%;
+    top: 500px;
+  }
+}
